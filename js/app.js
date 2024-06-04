@@ -11,6 +11,7 @@ loadListeners();
 // LISTENERS
 function loadListeners() {
     courseList.addEventListener('click', addCourseShoppingBasket);
+    shoppingBasketList.addEventListener('click', deleteCourseShoppingBasket); 
 
 }
 
@@ -67,4 +68,13 @@ function printCourseShoppingBasket() {
  
   // console.log('Pintaremos el array');
 
+}
+
+function deleteCourseShoppingBasket(e) {
+    e.preventDefault();
+    if (e.target.classList.contains('deleteCourse')) {
+        const courseId = e.target.getAttribute('data-id');
+        coursesShoppingBasket = coursesShoppingBasket.filter(course => course.id !== courseId);
+        printCourseShoppingBasket();
+    }
 }
