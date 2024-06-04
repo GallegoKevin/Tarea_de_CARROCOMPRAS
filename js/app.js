@@ -12,7 +12,7 @@ loadListeners();
 function loadListeners() {
     courseList.addEventListener('click', addCourseShoppingBasket);
     shoppingBasketList.addEventListener('click', deleteCourseShoppingBasket); 
-
+    clearShoppingBasket.addEventListener('click', clearShoppingBasketHandler);
 }
 
 
@@ -77,4 +77,9 @@ function deleteCourseShoppingBasket(e) {
         coursesShoppingBasket = coursesShoppingBasket.filter(course => course.id !== courseId);
         printCourseShoppingBasket();
     }
+}
+
+function clearShoppingBasketHandler() {
+    coursesShoppingBasket = [];
+    printCourseShoppingBasket();
 }
