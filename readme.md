@@ -18,7 +18,7 @@ function loadListeners() {
  Se agrego las funciones que manejan la eliminacion de cursos del carrito de compras y vaciar el carrito de compras.
 
 
--eliminacion de cursos del carrito de compras:
+- Eliminar los cursos del carrito de compras:
 
  ```javascript
 function deleteCourseShoppingBasket(e) {
@@ -31,7 +31,7 @@ function deleteCourseShoppingBasket(e) {
 }
  ```
 
--Vaciar el carrito de compras:
+- Vaciar el carrito de compras:
 
  ```javascript
 function clearShoppingBasketHandler() {
