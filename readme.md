@@ -1,8 +1,10 @@
-### Tarea:
+# Tarea:
  
  - Poder eliminar los cursos agregados  al carrito de compras y poder vaciar el carrito de compras.
 
- 1. Se agrego en `loadListeners()`; los event listeners necesarios para poder eliminar los cursos del carrito de compras y para vaciar el carrito de compras .
+ ### Primer Paso:
+ 
+  Se agrego en `loadListeners()`; los event listeners necesarios para poder eliminar los cursos del carrito de compras y para vaciar el carrito de compras .
 
  ```javascript
 function loadListeners() {
@@ -11,7 +13,9 @@ function loadListeners() {
 } 
  ```
 
- 2. Se agrego las funciones que manejan la eliminacion de cursos del carrito de compras y vaciar el carrito de compras.
+ ### Segundo Paso:
+ 
+ Se agrego las funciones que manejan la eliminacion de cursos del carrito de compras y vaciar el carrito de compras.
 
 
 -eliminacion de cursos del carrito de compras:
