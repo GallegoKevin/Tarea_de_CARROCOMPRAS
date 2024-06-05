@@ -70,7 +70,7 @@ function printCourseShoppingBasket() {
 
 }
 
-// Maneja la eliminación de un curso del carrito de compras
+// Eliminar cursos del carrito de compras
 function deleteCourseShoppingBasket(e) {
     e.preventDefault();
     if (e.target.classList.contains('deleteCourse')) {
@@ -82,7 +82,7 @@ function deleteCourseShoppingBasket(e) {
     }
 }
 
-
+// Vaciar el carrito de compras 
 function clearShoppingBasketHandler() {
     coursesShoppingBasket = [];
     printCourseShoppingBasket();
