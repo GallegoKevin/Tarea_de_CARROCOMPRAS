@@ -25,8 +25,10 @@ function deleteCourseShoppingBasket(e) {
     e.preventDefault();
     if (e.target.classList.contains('deleteCourse')) {
         const courseId = e.target.getAttribute('data-id');
-        coursesShoppingBasket = coursesShoppingBasket.filter(course => course.id !== courseId);
-        printCourseShoppingBasket();
+        const curso = document.querySelector(`[data-id="${courseId}"]`);
+        if (curso) {
+            curso.parentElement.parentElement.remove();
+        }
     }
 }
  ```
