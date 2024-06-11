@@ -26,8 +26,16 @@ function loadListeners() {
 function addCourseShoppingBasket(e) {
     if (e.target.classList.contains('addShoppingBasket')) {
         const courseSelected = e.target.parentElement.parentElement;
+        
+        const courseId = courseSelected.querySelector('a').getAttribute('data-id');
+        const existingCourse = coursesShoppingBasket.find(course => course.id === courseId);
 
-        readCourseToShoppingBasket(courseSelected);
+        if (existingCourse) {
+            existingCourse.quantity++;
+            printCourseShoppingBasket();
+        } else {
+            readCourseToShoppingBasket(courseSelected);
+        }
     }
 }
 
@@ -87,3 +95,5 @@ function clearShoppingBasketHandler() {
     coursesShoppingBasket = [];
     printCourseShoppingBasket();
 }
+
+
